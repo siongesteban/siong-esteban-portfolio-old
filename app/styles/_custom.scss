@@ -1,3 +1,36 @@
 @import url('pe-icon-7-stroke.css');
 @import url('pe-icon-7-stroke-helper.css');
 @import url('devicon.min.css');
+html,
+body {
+  height: 100%;
+}
+
+#intro {
+  color: #fff;
+  /*responsive background image*/
+  background: url('../images/backgrounds/dan-gold-297904.jpg') no-repeat center center fixed;
+  background-size: cover;
+  #logo {
+    margin: 20px;
+  }
+  #avatar {
+    display: flex;
+    border-radius: 100%;
+  }
+  .container .row:nth-child(2) {
+    margin-top: -90px;
+  }
+}
+
+#skills {
+  .devicon {
+    font-size: 5em;
+  }
+}
+
+footer {
+  margin-top: 20px;
+  padding: 20px;
+  background: gray;
+}
