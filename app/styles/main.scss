@@ -1,4 +1,14 @@
 @import "../bower_components/bootstrap/scss/bootstrap";
 @import "../bower_components/bootstrap/scss/bootstrap-grid";
 @import "../bower_components/components-font-awesome/scss/font-awesome";
+@import url('pe-icon-7-stroke.css');
+@import url('pe-icon-7-stroke-helper.css');
+@import url('devicon.min.css');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,900');
+@font-face {
+  font-family: 'Baron Neue';
+  src: url('../fonts/text/baron_neue_black.ttf') format('truetype');
+  font-weight: 900;
+}
+
 @import "custom";

@@ -1,25 +1,72 @@
-@import url('pe-icon-7-stroke.css');
-@import url('pe-icon-7-stroke-helper.css');
-@import url('devicon.min.css');
 html,
 body {
   height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.baron-neue {
+  font-family: 'Baron Neue', sans-serif;
+  font-weight: 900;
+}
+
+.bg-tmp {
+  background: teal;
 }
 
 #intro {
   color: #fff;
   /*responsive background image*/
-  background: url('../images/backgrounds/dan-gold-297904.jpg') no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/backgrounds/bg_intro_mounzer-awad-348688.jpg') no-repeat center center fixed;
   background-size: cover;
-  #logo {
-    margin: 20px;
-  }
   #avatar {
-    display: flex;
     border-radius: 100%;
   }
-  .container .row:nth-child(2) {
-    margin-top: -90px;
+  #name {
+    font-size: 2rem;
+  }
+  #short {
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+  #know-more {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 3px;
+    #know-more-btn {
+      cursor: pointer;
+      display: block;
+      margin-top: 10px;
+    }
+  }
+  /* max-width: 576px */
+  @media screen and (max-width: 576px) {
+    #avatar {
+      width: 100px;
+      height: 100px;
+    }
+    #name,
+    #short,
+    #know-more-btn {
+      font-size: 1.5rem;
+    }
+    #know-more {
+      font-size: 9px;
+    }
+  }
+  /* max-width: 375px */
+  @media screen and (max-width: 375px) {
+    #avatar {
+      width: 75px;
+      height: 75px;
+    }
+    #name,
+    #short {
+      font-size: 15px;
+    }
   }
 }
 
