@@ -17,10 +17,13 @@ p {
   background: teal;
 }
 
+
+/* intro section */
+
 #intro {
   color: #fff;
   /*responsive background image*/
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/backgrounds/bg_intro_mounzer-awad-348688.jpg') no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/backgrounds/bg_intro_mounzer-awad-348688.jpg') $responsive-bg fixed;
   background-size: cover;
   #avatar {
     border-radius: 100%;
@@ -42,32 +45,6 @@ p {
       margin-top: 10px;
     }
   }
-  /* max-width: 576px */
-  @media screen and (max-width: 576px) {
-    #avatar {
-      width: 100px;
-      height: 100px;
-    }
-    #name,
-    #short,
-    #know-more-btn {
-      font-size: 1.5rem;
-    }
-    #know-more {
-      font-size: 9px;
-    }
-  }
-  /* max-width: 375px */
-  @media screen and (max-width: 375px) {
-    #avatar {
-      width: 75px;
-      height: 75px;
-    }
-    #name,
-    #short {
-      font-size: 15px;
-    }
-  }
 }
 
 #skills {
@@ -80,4 +57,25 @@ footer {
   margin-top: 20px;
   padding: 20px;
   background: gray;
+}
+
+
+/* navbar */
+
+.navbar {
+  padding: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 17%, rgba(255, 255, 255, 0.69) 28%, rgba(255, 255, 255, 1) 63%, rgba(255, 255, 255, 1) 100%), url('../images/backgrounds/bg_navbar_ben-neale-222400.jpg') $responsive-bg;
+  background-size: cover;
+  .navbar-collapse {
+    justify-content: center;
+    .navbar-nav {
+      .nav-link {
+        padding: 30px 20px;
+        font-weight: 900;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+    }
+  }
 }
