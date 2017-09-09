@@ -18,9 +18,10 @@
 }
 
 
-/* max-width: 768px */
+/* max-width: 991px */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
+  /* show icons only */
   .navbar-nav {
     flex-direction: row;
     .nav-item {
@@ -45,6 +46,13 @@
     #name,
     #short {
       font-size: 15px;
+    }
+  }
+  .navbar {
+    .navbar-nav {
+      .nav-link {
+        padding: 10px 10px !important;
+      }
     }
   }
 }

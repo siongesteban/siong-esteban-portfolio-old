@@ -8,9 +8,30 @@ p {
   font-size: 1.2rem;
 }
 
-.baron-neue {
-  font-family: 'Baron Neue', sans-serif;
-  font-weight: 900;
+.section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.container {
+  .header,
+  .sub-header {
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  .header {
+    padding-bottom: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #fff;
+  }
+  .sub-header {
+    margin-top: 40px;
+    font-family: 'Lato', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+  }
 }
 
 .bg-tmp {
@@ -29,7 +50,10 @@ p {
     border-radius: 100%;
   }
   #name {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
     font-size: 2rem;
+    text-transform: uppercase;
   }
   #short {
     font-weight: 300;
@@ -63,6 +87,7 @@ footer {
 /* navbar */
 
 .navbar {
+  transition: all .3s ease;
   padding: 0;
   background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 17%, rgba(255, 255, 255, 0.69) 28%, rgba(255, 255, 255, 1) 63%, rgba(255, 255, 255, 1) 100%), url('../images/backgrounds/bg_navbar_ben-neale-222400.jpg') $responsive-bg;
   background-size: cover;
@@ -77,5 +102,19 @@ footer {
         letter-spacing: 2px;
       }
     }
+  }
+}
+
+
+/* "What I Do" section */
+
+#what-i-do {
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(45deg, rgba(255, 69, 69, 0.75) 0%, rgba(255, 69, 69, 0.95) 100%), url('../images/backgrounds/bg_what_i_do_pexels-photo-273230.jpg') $responsive-bg;
+  i {
+    display: block;
+    margin: 25px;
+    text-align: center;
   }
 }
