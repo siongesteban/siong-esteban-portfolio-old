@@ -143,7 +143,6 @@ footer {
       .mouse-overlay.show {
         background: rgba(#000, 0.5);
         div {
-          font-family: 'Lato', sans-serif;
           font-weight: 900;
           text-transform: uppercase;
           letter-spacing: 3px;
@@ -153,6 +152,24 @@ footer {
     div:hover {
       img {
         transform: scale(1.2);
+      }
+    }
+  }
+}
+
+
+/* "Skills" section */
+
+#skills {
+  background: radial-gradient(ellipse at center, rgba(74, 198, 255, 0.7) 0%, rgba(52, 180, 240, 1) 62%, rgba(39, 169, 230, 1) 100%), url('../images/backgrounds/bg_skills_pexels-photo-330771.jpg') $responsive-bg;
+  .row {
+    .row {
+      margin-top: 40px;
+      div {
+        span {
+          font-weight: 900;
+          letter-spacing: 2px;
+        }
       }
     }
   }
