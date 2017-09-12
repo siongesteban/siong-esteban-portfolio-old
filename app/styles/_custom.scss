@@ -240,4 +240,29 @@ footer {
       padding: 25px;
     }
   }
+  h3,
+  a {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 4px;
+  }
+  a {
+    color: #c71610;
+  }
+}
+
+.footer {
+  background: #202020;
+  color: #fff;
+  img {
+    width: 50%;
+    margin: auto;
+  }
+  #copyright {
+    font-size: 1rem;
+    color: #949494;
+  }
+  .fa-circle {
+    color: #333333;
+  }
 }
