@@ -201,3 +201,43 @@ footer {
 
 
 /* "What Else" section */
+
+
+/* "Contact" section */
+
+#contact {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 27%, rgba(255, 255, 255, 0.79) 100%), url('../images/backgrounds/bg_contact_brennan-ehrhardt-25066.jpg') $responsive-bg;
+  color: #202020;
+  .header {
+    border-color: #202020;
+  }
+  .row {
+    margin-top: 40px;
+  }
+  form {
+    input:focus,
+    textarea:focus,
+    button:focus,
+    button:active {
+      outline: 0;
+      box-shadow: 0 0 0 0 #fff;
+    }
+    input,
+    textarea {
+      border: 5px solid #202020;
+      border-radius: 0;
+      font-size: 2rem;
+      color: #202020;
+    }
+    button {
+      background: #202020;
+      border: 0;
+      border-radius: 0;
+      font-family: 'Lato', sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      padding: 25px;
+    }
+  }
+}
