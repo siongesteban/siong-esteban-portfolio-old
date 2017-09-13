@@ -26,6 +26,9 @@
 /* max-width: 991px */
 
 @media screen and (max-width: 991px) {
+  .navbar {
+    display: none;
+  }
   /* show icons only */
   .navbar-nav {
     flex-direction: row;

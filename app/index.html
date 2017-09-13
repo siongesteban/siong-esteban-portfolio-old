@@ -51,13 +51,13 @@
         </a>
       </div>
       <div class="row h-50 justify-content-center align-items-center">
-        <div class="col-md-6" data-aos="fade-right" data-aos-easing="ease" data-aos-delay="800" data-aos-duration="1000">
-          <p id="short" class="text-center">The guy's name is<br><span id="name" class="baron-neue">Siong Esteban</span><br>from Philippines, a web developer and a hobbyist photographer. I'm currently pursuing a Bachelor's Degree in Computer Science. I design and build things as much
+        <div class="col-md-6">
+          <p id="short" class="text-center" data-aos="fade-right" data-aos-easing="ease" data-aos-delay="800" data-aos-duration="1000">The guy's name is<br><span id="name" class="baron-neue">Siong Esteban</span><br>from Philippines, a web developer and a hobbyist photographer. I'm currently pursuing a Bachelor's Degree in Computer Science. I design and build things as much
             as I can.</p>
         </div>
-        <div class="col-md-4" data-aos="fade-left" data-aos-easing="ease" data-aos-delay="800" data-aos-duration="1000">
+        <div class="col-md-4">
           <div class="d-flex justify-content-center">
-            <img id="avatar" src="images/avatar.jpg" width="250px" height="250px" />
+            <img id="avatar" src="images/avatar.jpg" width="250px" height="250px" data-aos="fade-left" data-aos-easing="ease" data-aos-delay="800" data-aos-duration="1000" />
           </div>
         </div>
       </div>
@@ -96,6 +96,7 @@
     </div>
   </nav>
   <div id="sections">
+
     <div id="what-i-do" class="section">
       <div class="container">
         <h1 class="header">What I Do</h1>
@@ -340,9 +341,15 @@
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
             if (target.length) {
+              var offset = 0;
+
+              if ($(window).width() > 768) {
+                offset = 78;
+              }
+
               $('html, body').animate({
-                scrollTop: (target.offset().top - 78)
-              }, 1000, "easeInOutExpo");
+                scrollTop: (target.offset().top - offset)
+              }, 1000, "easeInQuad");
               return false;
             }
           }
