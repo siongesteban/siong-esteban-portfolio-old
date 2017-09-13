@@ -84,25 +84,45 @@ p {
 /* intro section */
 
 #intro {
-  color: #fff;
+  color: #202020;
   /*responsive background image*/
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/backgrounds/bg_intro_mounzer-awad-348688.jpg') $responsive-bg fixed;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.77) 0%, rgba(255, 255, 255, 1) 100%), url('../images/backgrounds/bg_intro_sabri-tuzcu-331970.jpg') $responsive-bg fixed;
   background-size: cover;
+  #logo-link {
+    text-align: center;
+    #logo {
+      width: 20%;
+    }
+  }
   #avatar {
     border-radius: 100%;
   }
   #name {
+    color: #ff2d69;
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
+    @include responsive-font(2.5vw,
+    40px,
+    70px,
+    false);
     text-transform: uppercase;
+    letter-spacing: 4px;
   }
   #short {
-    font-weight: 300;
+    font-weight: 400;
+    @include responsive-font(2vw,
+    20px,
+    30px,
+    false);
   }
   #know-more {
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 3px;
+    @include responsive-font(1vw,
+    11px,
+    30px,
+    false);
     #know-more-btn {
       cursor: pointer;
       display: block;
