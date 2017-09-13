@@ -136,14 +136,14 @@ p {
       cursor: pointer;
       display: inline;
       position: relative;
-      top: 0;
+      top: -10px;
       transition: all .3s ease;
     }
     #know-more-btn:hover {
-      top: -5px;
+      top: -15px;
     }
     #know-more-btn:active {
-      top: 0;
+      top: -10px;
     }
   }
 }
