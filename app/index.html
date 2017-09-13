@@ -47,21 +47,21 @@
       <div class="row h-25 justify-content-center align-items-center">
         <!-- <img id="logo" src="images/logo.png" height="50px" /> -->
         <a id="logo-link" href="#">
-          <img id="logo" src="images/logo.svg" />
+          <img id="logo" src="images/logo.svg" data-aos="fade-down" data-aos-easing="ease" data-aos-delay="400" data-aos-duration="1000" />
         </a>
       </div>
       <div class="row h-50 justify-content-center align-items-center">
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-right" data-aos-easing="ease" data-aos-delay="800" data-aos-duration="1000">
           <p id="short" class="text-center">The guy's name is<br><span id="name" class="baron-neue">Siong Esteban</span><br>from Philippines, a web developer and a hobbyist photographer. I'm currently pursuing a Bachelor's Degree in Computer Science. I design and build things as much
             as I can.</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-left" data-aos-easing="ease" data-aos-delay="800" data-aos-duration="1000">
           <div class="d-flex justify-content-center">
             <img id="avatar" src="images/avatar.jpg" width="250px" height="250px" />
           </div>
         </div>
       </div>
-      <div class="row h-25 align-items-end">
+      <div class="row h-25 align-items-end" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="1200" data-aos-duration="1000">
         <div class="col">
           <p id="know-more" class="text-center">
             Know more about me
@@ -313,6 +313,12 @@
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="bower_components/tether/dist/js/tether.min.js"></script>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <script>
+    $(document).ready(function() {
+      AOS.init();
+    });
+  </script>
   <!-- endbuild -->
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
