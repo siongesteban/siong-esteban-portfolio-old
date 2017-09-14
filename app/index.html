@@ -128,21 +128,48 @@
           <div class="col-md-4">
             <img src="images/project_banners/ims_grid.jpg" width="100%" />
             <div class="mouse-overlay"></div>
-            <a href="#" target="_blank"></a>
+            <a class="link" href="#" target="_blank"></a>
           </div>
           <div class="col-md-4">
             <img src="images/project_banners/bingo_app.jpg" width="100%" />
             <div class="mouse-overlay"></div>
-            <a href="#" target="_blank"></a>
+            <a class="link" href="#" target="_blank"></a>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" id="others">
             <img src="images/project_banners/others.jpg" width="100%" />
-            <div class="mouse-overlay show">
+            <div class="mouse-overlay show" data-toggle="modal" data-target="#modal-other-projects">
               <div class="d-flex h-100 justify-content-center align-items-center">
                 Others
               </div>
             </div>
-            <a href="#" target="_blank"></a>
+          </div>
+        </div>
+        <div class="modal fade" id="modal-other-projects" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal-label">Other Projects</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              </div>
+              <div class="modal-body">
+                <h4>Library Management System</h4>
+                <p class="font-italic">Full-Stack<br>Web, JavaServer Pages</p>
+                <hr>
+                <h4>Music Library</h4>
+                <p class="font-italic">Full-Stack<br>Desktop, Visual Studio.Net</p>
+                <hr>
+                <h4>Klik, a JavaScript-based game</h4>
+                <p class="font-italic">Full-Stack<br>Web, JavaScript, ASP.Net MVC 5</p>
+                <hr>
+                <h4>Pageant Tabulation App</h4>
+                <p class="font-italic">Front-End<br>Web</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -245,7 +272,7 @@
     <div id="contact" class="section">
       <div class="container">
         <h1 class="header">Contact</h1>
-        <div class="row justify-content-center" data-aos="fade-up">
+        <div class="row justify-content-center">
           <div class="col-md-5">
             <form>
               <div class="form-group">
