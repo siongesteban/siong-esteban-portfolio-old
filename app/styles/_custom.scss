@@ -11,6 +11,9 @@ body {
   p {
     @include responsive-font(1.5vw, 20px, 30px, false);
   }
+  img {
+    pointer-events: none;
+  }
 }
 
 .section {
@@ -248,10 +251,35 @@ body {
 }
 
 
-/* "Skills" section */
+/* "Education" section */
 
 #education {
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.76) 86%, rgba(0, 0, 0, 0.76) 100%), url('../images/backgrounds/william-bout-bg_education_264826.jpg') $responsive-bg;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.76) 86%, rgba(0, 0, 0, 0.76) 100%), url('../images/backgrounds/bg_education_william-bout-264826.jpg') $responsive-bg;
+}
+
+
+/* "What Else" section */
+
+#what-else {
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.49) 0%, rgba(0, 0, 0, 0.76) 86%, rgba(0, 0, 0, 0.76) 100%), url('../images/backgrounds/bg_what_else_img4.jpg') $responsive-bg;
+  a {
+    position: relative;
+    top: 0;
+    margin: 20px;
+    transition: all .3s ease;
+    .fa-instagram {
+      color: #cd486b;
+    }
+    .fa-wordpress {
+      color: #2992c1;
+    }
+    .fa-vimeo {
+      color: #1ab7ea;
+    }
+  }
+  a:hover {
+    top: -4px;
+  }
 }
 
 
