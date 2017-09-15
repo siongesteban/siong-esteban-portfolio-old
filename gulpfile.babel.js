@@ -31,7 +31,7 @@ import runSequence from 'run-sequence';
 import browserSync from 'browser-sync';
 import swPrecache from 'sw-precache';
 import gulpLoadPlugins from 'gulp-load-plugins';
-import {output as pagespeed} from 'psi';
+import { output as pagespeed } from 'psi';
 import pkg from './package.json';
 
 const $ = gulpLoadPlugins();
@@ -39,21 +39,21 @@ const reload = browserSync.reload;
 
 // Lint JavaScript
 gulp.task('lint', () =>
-  gulp.src(['app/scripts/**/*.js','!node_modules/**'])
-    .pipe($.eslint())
-    .pipe($.eslint.format())
-    .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
+  gulp.src(['app/scripts/**/*.js', '!node_modules/**'])
+  .pipe($.eslint())
+  .pipe($.eslint.format())
+  .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
 );
 
 // Optimize images
 gulp.task('images', () =>
   gulp.src('app/images/**/*')
-    .pipe($.cache($.imagemin({
-      progressive: true,
-      interlaced: true
-    })))
-    .pipe(gulp.dest('dist/images'))
-    .pipe($.size({title: 'images'}))
+  .pipe($.cache($.imagemin({
+    progressive: true,
+    interlaced: true
+  })))
+  .pipe(gulp.dest('dist/images'))
+  .pipe($.size({ title: 'images' }))
 );
 
 // Copy all files at the root level (app)
@@ -65,7 +65,7 @@ gulp.task('copy', () =>
   ], {
     dot: true
   }).pipe(gulp.dest('dist'))
-    .pipe($.size({title: 'copy'}))
+  .pipe($.size({ title: 'copy' }))
 );
 
 // Compile and automatically prefix stylesheets
@@ -84,9 +84,9 @@ gulp.task('styles', () => {
 
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
-    'app/styles/**/*.scss',
-    'app/styles/**/*.css'
-  ])
+      'app/styles/**/*.scss',
+      'app/styles/**/*.css'
+    ])
     .pipe($.newer('.tmp/styles'))
     .pipe($.sourcemaps.init())
     .pipe($.sass({
@@ -96,7 +96,7 @@ gulp.task('styles', () => {
     .pipe(gulp.dest('.tmp/styles'))
     // Concatenate and minify styles
     .pipe($.if('*.css', $.cssnano()))
-    .pipe($.size({title: 'styles'}))
+    .pipe($.size({ title: 'styles' }))
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest('dist/styles'))
     .pipe(gulp.dest('.tmp/styles'));
@@ -106,25 +106,25 @@ gulp.task('styles', () => {
 // to enable ES2015 support remove the line `"only": "gulpfile.babel.js",` in the
 // `.babelrc` file.
 gulp.task('scripts', () =>
-    gulp.src([
-      // Note: Since we are not using useref in the scripts build pipeline,
-      //       you need to explicitly list your scripts here in the right order
-      //       to be correctly concatenated
-      './app/scripts/main.js'
-      // Other scripts
-    ])
-      .pipe($.newer('.tmp/scripts'))
-      .pipe($.sourcemaps.init())
-      .pipe($.babel())
-      .pipe($.sourcemaps.write())
-      .pipe(gulp.dest('.tmp/scripts'))
-      .pipe($.concat('main.min.js'))
-      .pipe($.uglify({preserveComments: 'some'}))
-      // Output files
-      .pipe($.size({title: 'scripts'}))
-      .pipe($.sourcemaps.write('.'))
-      .pipe(gulp.dest('dist/scripts'))
-      .pipe(gulp.dest('.tmp/scripts'))
+  gulp.src([
+    // Note: Since we are not using useref in the scripts build pipeline,
+    //       you need to explicitly list your scripts here in the right order
+    //       to be correctly concatenated
+    './app/scripts/main.js'
+    // Other scripts
+  ])
+  .pipe($.newer('.tmp/scripts'))
+  .pipe($.sourcemaps.init())
+  .pipe($.babel())
+  .pipe($.sourcemaps.write())
+  .pipe(gulp.dest('.tmp/scripts'))
+  .pipe($.concat('main.min.js'))
+  .pipe($.uglify({ preserveComments: 'some' }))
+  // Output files
+  .pipe($.size({ title: 'scripts' }))
+  .pipe($.sourcemaps.write('.'))
+  .pipe(gulp.dest('dist/scripts'))
+  .pipe(gulp.dest('.tmp/scripts'))
 );
 
 // Scan your HTML for assets & optimize them
@@ -135,8 +135,8 @@ gulp.task('html', () => {
       noAssets: true
     }))
 
-    // Minify any HTML
-    .pipe($.if('*.html', $.htmlmin({
+  // Minify any HTML
+  .pipe($.if('*.html', $.htmlmin({
       removeComments: true,
       collapseWhitespace: true,
       collapseBooleanAttributes: true,
@@ -148,12 +148,12 @@ gulp.task('html', () => {
       removeOptionalTags: true
     })))
     // Output files
-    .pipe($.if('*.html', $.size({title: 'html', showFiles: true})))
+    .pipe($.if('*.html', $.size({ title: 'html', showFiles: true })))
     .pipe(gulp.dest('dist'));
 });
 
 // Clean output directory
-gulp.task('clean', () => del(['.tmp', 'dist/*', '!dist/.git'], {dot: true}));
+gulp.task('clean', () => del(['.tmp', 'dist/*', '!dist/.git'], { dot: true }));
 
 // Watch files for changes & reload
 gulp.task('serve', ['scripts', 'styles'], () => {
@@ -196,8 +196,7 @@ gulp.task('serve:dist', ['default'], () =>
 // Build production files, the default task
 gulp.task('default', ['clean'], cb =>
   runSequence(
-    'styles',
-    ['lint', 'html', 'scripts', 'images', 'copy'],
+    'styles', ['lint', 'html', 'scripts', 'images', 'copy'],
     'generate-service-worker',
     cb
   )
@@ -208,9 +207,9 @@ gulp.task('pagespeed', cb =>
   // Update the below URL to the public URL of your site
   pagespeed('example.com', {
     strategy: 'mobile'
-    // By default we use the PageSpeed Insights free (no API key) tier.
-    // Use a Google Developer API key if you have one: http://goo.gl/RkN0vE
-    // key: 'YOUR_API_KEY'
+      // By default we use the PageSpeed Insights free (no API key) tier.
+      // Use a Google Developer API key if you have one: http://goo.gl/RkN0vE
+      // key: 'YOUR_API_KEY'
   }, cb)
 );
 

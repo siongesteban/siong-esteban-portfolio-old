@@ -1,3 +1,7 @@
+/*
+ * Default values
+ */
+
 html,
 body {
   height: 100%;
@@ -41,10 +45,6 @@ body {
   }
 }
 
-.fixed-top {
-  box-shadow: 0px 3px 8px -1px rgba(0, 0, 0, 0.53);
-}
-
 .bg-tmp {
   background: teal;
 }
@@ -53,7 +53,6 @@ body {
 /* navbar */
 
 .navbar {
-  transition: all .3s ease;
   padding: 0;
   background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 17%, rgba(255, 255, 255, 0.69) 28%, rgba(255, 255, 255, 1) 63%, rgba(255, 255, 255, 1) 100%), url('../images/backgrounds/bg_navbar_ben-neale-222400.jpg') $responsive-bg;
   background-size: cover;
@@ -70,6 +69,10 @@ body {
       }
     }
   }
+}
+
+.fixed-top {
+  box-shadow: 0px 3px 8px -1px rgba(0, 0, 0, 0.53);
 }
 
 
@@ -94,6 +97,7 @@ body {
   color: #202020;
   background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.77) 0%, rgba(255, 255, 255, 1) 100%), url('../images/backgrounds/bg_intro_sabri-tuzcu-331970.jpg') $responsive-bg fixed;
   background-size: cover;
+  border-bottom: 3px solid $color-primary;
   #logo-link {
     text-align: center;
     #logo {
@@ -206,7 +210,6 @@ body {
         a:hover {
           text-decoration: none;
         }
-        .fa {}
         .fa-instagram {
           color: #cd486b;
         }
@@ -311,6 +314,7 @@ body {
       20px,
       70px,
       false);
+      resize: none;
     }
     button {
       background: #202020;

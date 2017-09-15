@@ -30,7 +30,7 @@
   <meta name="msapplication-TileColor" content="#2F3BA2">
 
   <!-- Color the status bar on mobile devices -->
-  <meta name="theme-color" content="#4e4e4e">
+  <meta name="theme-color" content="#fff">
 
   <!-- Link main stylesheet -->
   <link rel="stylesheet" href="styles/main.css">
@@ -42,18 +42,17 @@
 </head>
 
 <body>
+  <!--intro-->
   <div id="intro" class="h-100">
     <div class="container h-100">
       <div class="row h-25 justify-content-center align-items-center">
-        <!-- <img id="logo" src="images/logo.png" height="50px" /> -->
         <a id="logo-link" href="#">
           <img id="logo" src="images/logo.svg" data-aos="fade-down" data-aos-delay="400" />
         </a>
       </div>
       <div class="row h-50 justify-content-center align-items-center">
         <div class="col-md-6">
-          <p id="short" class="text-center" data-aos="fade-right" data-aos-delay="800">The guy's name is<br><span id="name" class="baron-neue">Siong Esteban</span><br>from Philippines, a web developer and a hobbyist photographer. I'm currently pursuing a Bachelor's Degree in Computer Science. I design and build things as much
-            as I can.</p>
+          <p id="short" class="text-center" data-aos="fade-right" data-aos-delay="800">Hi! I am<br><span id="name" class="baron-neue">Siong Esteban</span>,<br>a web developer and a hobbyist photographer from Philippines.</p>
         </div>
         <div class="col-md-4">
           <div class="d-flex justify-content-center">
@@ -71,6 +70,7 @@
       </div>
     </div>
   </div>
+  <!--navigation bar-->
   <nav id="navbar" class="navbar navbar-toggleable-md navbar-light">
     <div class="navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
@@ -87,7 +87,7 @@
           <a class="nav-link js-scroll-trigger" href="#education"><i class="fa fa-mortar-board fa-fw" aria-hidden="true"></i> <span class="label">Education</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#what-else"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i> <span class="label">What Else</span></a>
+          <a class="nav-link js-scroll-trigger" href="#what-else"><i class="fa fa-camera fa-fw" aria-hidden="true"></i> <span class="label">What Else</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#contact"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i> <span class="label">Contact</span></a>
@@ -95,32 +95,32 @@
       </ul>
     </div>
   </nav>
+  <!--sections-->
   <div id="sections">
+    <!--"What I Do"-->
     <div id="what-i-do" class="section">
       <div class="container">
         <h1 class="header">What I Do</h1>
         <div class="row justify-content-center" data-aos="fade-up">
-          <div class="col-md-6">
+          <div class="col-md-5">
             <h2 class="sub-header">Design</h2>
             <i class="pe-7s-pen pe-4x pe-va"></i>
-            <p>Donec luctus felis nulla, in suscipit metus posuere eget. In sit amet sollicitudin sapien. Maecenas id dignissim felis. Mauris ut faucibus est. Praesent laoreet purus a mi sollicitudin, sit amet consequat lacus tempor. Phasellus et ipsum nibh.
-              Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            <p>I love creating things in the web that people would always want to see. I know whether a design is good or not. Bad design is a sin.</p>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-5">
             <h2 class="sub-header">Build</h2>
             <i class="pe-7s-tools pe-4x pe-va"></i>
-            <p>Cras vel ornare felis. Nulla facilisi. Quisque consectetur ut nisi eget lacinia. Nam faucibus, enim vitae tempus fermentum, ipsum lectus tincidunt massa, vel mollis arcu est eget purus. Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos himenaeos.</p>
+            <p>I believe that ideas should always be turned to a reality. I can't let my ideas to just stay in a piece of paper, it needs to be alive.</p>
           </div>
-          <div class="col-md-6">
+          <!-- <div class="col-md-5">
             <h2 class="sub-header">Learn</h2>
             <i class="pe-7s-magic-wand pe-4x pe-va"></i>
-            <p>Maecenas ullamcorper placerat lacus, id molestie mi tincidunt vel. Integer vitae arcu fermentum, viverra mi dictum, viverra enim. Mauris aliquam pharetra ligula at rhoncus. Aliquam egestas a ex sed finibus. Praesent dictum, tortor sed tristique
-              blandit, leo metus maximus ante, non interdum quam augue sed nisl.</p>
-          </div>
+            <p>I always add new things to my skill set.</p>
+          </div> -->
         </div>
       </div>
     </div>
+    <!--"Projects"-->
     <div id="projects" class="section">
       <div class="container">
         <h1 class="header">Projects</h1>
@@ -128,12 +128,12 @@
           <div class="col-md-4">
             <img src="images/project_banners/ims_grid.jpg" width="100%" />
             <div class="mouse-overlay"></div>
-            <a class="link" href="#" target="_blank"></a>
+            <a class="link" href="https://github.com/siongesteban/ims-grid" target="_blank"></a>
           </div>
           <div class="col-md-4">
             <img src="images/project_banners/bingo_app.jpg" width="100%" />
             <div class="mouse-overlay"></div>
-            <a class="link" href="#" target="_blank"></a>
+            <a class="link" href="https://github.com/siongesteban/bingo-app" target="_blank"></a>
           </div>
           <div class="col-md-4" id="others">
             <img src="images/project_banners/others.jpg" width="100%" />
@@ -144,6 +144,7 @@
             </div>
           </div>
         </div>
+        <!--Modal for other projects-->
         <div class="modal fade" id="modal-other-projects" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -155,16 +156,32 @@
               </div>
               <div class="modal-body">
                 <h4>Library Management System</h4>
-                <p class="font-italic">Full-Stack<br>Web, JavaServer Pages</p>
+                <p>
+                  <span class="badge badge-primary">Full-Stack</span><br>
+                  <span class="font-italic">Web, JavaServer Pages</span>
+                </p>
                 <hr>
-                <h4>Music Library</h4>
-                <p class="font-italic">Full-Stack<br>Desktop, Visual Studio.Net</p>
+                <a href="https://github.com/siongesteban/music-library" target="_blank">
+                  <h4>Music Library</h4>
+                </a>
+                <p>
+                  <span class="badge badge-primary">Full-Stack</span><br>
+                  <span class="font-italic">Desktop, Visual Studio .NET</span>
+                </p>
                 <hr>
-                <h4>Klik, a JavaScript-based game</h4>
-                <p class="font-italic">Full-Stack<br>Web, JavaScript, ASP.Net MVC 5</p>
+                <a href="https://github.com/siongesteban/Klik" target="_blank">
+                  <h4>Klik, a JS-based game</h4>
+                </a>
+                <p>
+                  <span class="badge badge-primary">Full-Stack</span><br>
+                  <span class="font-italic">Web, JavaScript, ASP.NET MVC 5</span>
+                </p>
                 <hr>
                 <h4>Pageant Tabulation App</h4>
-                <p class="font-italic">Front-End<br>Web</p>
+                <p>
+                  <span class="badge badge-info">Front-End</span><br>
+                  <span class="font-italic">Web, JavaServer Pages</span>
+                </p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -174,6 +191,7 @@
         </div>
       </div>
     </div>
+    <!--"Skills"-->
     <div id="skills" class="section">
       <div class="container">
         <h1 class="header">Skills</h1>
@@ -221,6 +239,7 @@
         </div>
       </div>
     </div>
+    <!--"Education"-->
     <div id="education" class="section">
       <div class="container">
         <h1 class="header">Education</h1>
@@ -228,13 +247,12 @@
           <div class="col-md-12">
             <h2 class="sub-header">AMA Computer College<br><span class="font-weight-normal">Tarlac Campus</span></h2>
             <h4>Bachelor of Science in Computer Science</h4>
-            <h6 class="font-italic">2015-18</h6>
-            <p>Proin vitae mollis mi, tincidunt fringilla odio. Nunc iaculis nec turpis nec euismod. Nullam lobortis mi vitae ex consectetur porttitor. Vestibulum a lacus rutrum, congue quam in, viverra turpis. Mauris pharetra sit amet nibh ut congue. Aliquam
-              lacus ligula, condimentum luctus posuere eget, suscipit a augue. Aenean sit amet eros vel tortor vehicula varius. Vivamus commodo urna lacinia sem laoreet dignissim.</p>
+            <h6 class="font-italic">2015-Present</h6>
           </div>
         </div>
       </div>
     </div>
+    <!--"What Else"-->
     <div id="what-else" class="section">
       <div class="container">
         <h1 class="header">What Else</h1>
@@ -242,24 +260,28 @@
           <div class="col-md-5">
             <h2 class="sub-header">Photography</h2>
             <i class="pe-7s-camera pe-4x pe-va"></i>
-            <p>Donec luctus felis nulla, in suscipit metus posuere eget. In sit amet sollicitudin sapien.</p>
-            <a href="#" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
-            <a href="#" target="_blank"><i class="fa fa-wordpress fa-2x"></i></a>
+            <p>One of the things that I love to do is to capture moments.</p>
+            <a href="https://www.instagram.com/siong.esteban" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+            <a href="https://smoothsnaps.wordpress.com" target="_blank"><i class="fa fa-wordpress fa-2x"></i></a>
           </div>
           <div class="col-md-5">
             <h2 class="sub-header">Filmmaking</h2>
             <i class="pe-7s-film pe-4x pe-va"></i>
-            <p>Cras vel ornare felis. Nulla facilisi. Quisque consectetur ut nisi eget lacinia.</p>
-            <a href="#" target="_blank"><i class="fa fa-vimeo fa-2x"></i></a>
+            <p>I also make films if I still have free time.</p><br>
+            <a href="https://www.vimeo.com/scaesfilms" target="_blank"><i class="fa fa-vimeo fa-2x"></i></a>
           </div>
         </div>
       </div>
     </div>
+    <!--"Contact"-->
     <div id="contact" class="section">
       <div class="container">
         <h1 class="header">Contact</h1>
-        <div class="row justify-content-center">
-          <div class="col-md-5">
+        <div class="row justify-content-center" data-aos="fade-up">
+          <div class="col-md-6">
+            <p>
+              Do you have any concern? Want to ask questions? Just use the form to leave a message. I will send a reply as soon as I read your message.
+            </p>
             <form>
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Name">
@@ -272,12 +294,7 @@
               </div>
               <button type="submit" class="btn btn-primary btn-block">Submit</button>
             </form>
-          </div>
-          <div class="col-md-5">
-            <p>
-              Do you have any concern? Wanna ask questions? Just send me a message! I promise I'll answer anything you ask. If there's anything you want me to add to my portfolio, just tell me, that would be a big help for me. Please, don't hesitate. I'll reply as
-              soon as I read your message.
-            </p>
+            <hr>
             <h3>Email me instead.</h3>
             <a href="mailto:siong.esteban@gmail.com">siong.esteban@gmail.com</a>
           </div>
@@ -285,6 +302,7 @@
       </div>
     </div>
   </div>
+  <!--footer-->
   <footer class="footer">
     <div class="container h-100">
       <div class="row h-100 justify-content-center align-items-center">
@@ -300,19 +318,19 @@
         </div>
       </div>
       <p class="text-center">
-        <a href="https://m.me/siong.esteban" target="_blank">
+        <a href="https://www.messenger.com/t/siong.esteban" target="_blank">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
           </span>
         </a>
-        <a href="https://m.me/siong.esteban" target="_blank">
+        <a href="https://www.github.com/aescaes" target="_blank">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-github fa-stack-1x fa-inverse"></i>
           </span>
         </a>
-        <a href="https://m.me/siong.esteban" target="_blank">
+        <a href="https://www.linkedin.com/in/jerico-esteban-04aa94122" target="_blank">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -323,30 +341,34 @@
     </div>
   </footer>
 
-
   <!-- build:js scripts/main.min.js -->
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="bower_components/tether/dist/js/tether.min.js"></script>
-  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="scripts/aos.min.js"></script>
   <script src="scripts/jquery.easing.min.js"></script>
   <script>
     $(document).ready(function() {
+      // initialize "Animate on Scroll"
       AOS.init({
         duration: 1000,
         easing: 'ease'
       });
 
+      // navigation bar affix
       $(window).on('scroll', function() {
-        if ($(this).scrollTop() >= 807) {
-          $('.navbar').addClass('fixed-top');
-          $('#sections').css('padding-top', '78px');
-        } else {
-          $('.navbar').removeClass('fixed-top');
-          $('#sections').css('padding-top', '0');
+        if ($(this).width() > 768) {
+          if ($(this).scrollTop() >= 807) {
+            $('.navbar').addClass('fixed-top');
+            $('#sections').css('padding-top', '78px');
+          } else {
+            $('.navbar').removeClass('fixed-top');
+            $('#sections').css('padding-top', '0');
+          }
         }
       });
 
+      // scrollspy scroll animation
       (function($) {
         "use strict"; // Start of use strict
 
@@ -364,7 +386,7 @@
 
               $('html, body').animate({
                 scrollTop: (target.offset().top - offset)
-              }, 500, "easeInQuad");
+              }, 1000, "easeInOutQuad");
               return false;
             }
           }
