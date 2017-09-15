@@ -324,7 +324,7 @@
             <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
           </span>
         </a>
-        <a href="https://www.github.com/aescaes" target="_blank">
+        <a href="https://www.github.com/siongesteban" target="_blank">
           <span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -345,67 +345,9 @@
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/tether/dist/js/tether.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="scripts/aos.min.js"></script>
-  <script src="scripts/jquery.easing.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      // initialize "Animate on Scroll"
-      AOS.init({
-        duration: 1000,
-        easing: 'ease'
-      });
-
-      // navigation bar affix
-      $(window).on('scroll', function() {
-        if ($(this).width() > 768) {
-          if ($(this).scrollTop() >= 807) {
-            $('.navbar').addClass('fixed-top');
-            $('#sections').css('padding-top', '78px');
-          } else {
-            $('.navbar').removeClass('fixed-top');
-            $('#sections').css('padding-top', '0');
-          }
-        }
-      });
-
-      // scrollspy scroll animation
-      (function($) {
-        "use strict"; // Start of use strict
-
-        // Smooth scrolling using jQuery easing
-        $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-          if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-              var offset = 0;
-
-              if ($(window).width() > 768) {
-                offset = 78;
-              }
-
-              $('html, body').animate({
-                scrollTop: (target.offset().top - offset)
-              }, 1000, "easeInOutQuad");
-              return false;
-            }
-          }
-        });
-
-        // Closes responsive menu when a scroll trigger link is clicked
-        $('.js-scroll-trigger').click(function() {
-          $('.navbar-collapse').collapse('hide');
-        });
-
-        // Activate scrollspy to add active class to navbar items on scroll
-        $('body').scrollspy({
-          target: '#navbar',
-          offset: 78
-        });
-
-      })(jQuery); // End of use strict
-    });
-  </script>
+  <script src="bower_components/aos.min.js"></script>
+  <script src="bower_components/jquery.easing.min.js"></script>
+  <script src="scripts/main.js"></script>
   <!-- endbuild -->
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
