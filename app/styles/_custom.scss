@@ -291,6 +291,7 @@ body {
 #contact {
   background: linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 27%, rgba(255, 255, 255, 0.79) 100%), url('../images/backgrounds/bg_contact_brennan-ehrhardt-25066.jpg') $responsive-bg;
   color: #202020;
+  transition: all .3s ease;
   .header {
     border-color: #202020;
   }
